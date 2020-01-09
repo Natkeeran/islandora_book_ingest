@@ -1,3 +1,4 @@
+uuid: 5addd9a4-2b27-403f-8353-da46ebdee797
 # Uninstall this config when the feature is uninstalled
 dependencies:
   enforced:
@@ -17,7 +18,7 @@ source:
 
   # Each migration needs a unique key per row in the csv.  Here we're using the file path.
   keys:
-    - identifier 
+    - file 
 
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
@@ -46,8 +47,8 @@ process:
   # Lookup the migrated node in the node migration
   field_member_of:
     plugin: migration_lookup
-    source: identifier 
-    migration: node 
+    source: book_identifier
+    migration: import_book_node 
     no_stub: true
 
 # We're making nodes
