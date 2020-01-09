@@ -1,17 +1,16 @@
-uuid: 57c97698-8407-40bf-87de-2dd4f29e8221
 # Uninstall this config when the feature is uninstalled
 dependencies:
   enforced:
     module:
       - islandora_book_ingest
 
-id: import_book_node
-label: Import Paged Content node from CSV 
+id: import_page_node
+label: Import Page node from CSV 
 migration_group: islandora_book_ingest
 
 source:
   plugin: csv
-  path: modules/contrib/islandora_book_ingest/data/books.csv
+  path: modules/contrib/islandora_book_ingest/data/pages.csv
 
   # 1 means you have a header row, 0 means you don't
   header_row_count: 1
@@ -23,7 +22,7 @@ source:
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
     # We're tagging our nodes as Images
-    model: Paged Content 
+    model: Page
 
     # Everything gets created as admin
     uid: 1
@@ -43,6 +42,13 @@ process:
     value_key: name 
     bundle_key: vid
     bundle: islandora_models 
+
+  # Lookup the migrated node in the node migration
+  field_member_of:
+    plugin: migration_lookup
+    source: identifier 
+    migration: node 
+    no_stub: true
 
 # We're making nodes
 destination:
