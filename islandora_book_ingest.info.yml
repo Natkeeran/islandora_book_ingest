@@ -1,0 +1,8 @@
+name: 'Islandora Book Ingest'
+type: module
+description: 'Book ingest example.'
+core: 8.x
+package: 'Islandora'
+dependencies:
+  - islandora_book_ingest
+
