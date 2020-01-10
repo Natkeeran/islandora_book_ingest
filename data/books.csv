@@ -1,7 +1,7 @@
-identifier,title,author,description
-ArchivalObject001,"AdC, Misc. Civil box 235, fascicle 2",test_1,
-ArchivalObject002,"AdC, Misc. Civil box 260, fascicle 20",test_2,
-ArchivalObject003,"AdC, Misto box 3015, fascicle 7",test_3,
-ArchivalObject004,"Alberi, Relazioni box  fascicle I",test_4,
-ArchivalObject005,"Alberi, Relazioni box  fascicle II",test_5,
-ArchivalObject006,"Bailo a Costantinopoli, Busta 250 Fascicolo 330",test_6,
+identifier,title,book_identifier,file_mime,file_identifier,file
+ArchivalObject001_page1,page 1,ArchivalObject001,image/jpeg,ArchivalObject001_page1_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject001/page_1.jpg
+ArchivalObject001_page2,page 2,ArchivalObject001,image/jpeg,ArchivalObject001_page2_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject001/page_2.jpg
+ArchivalObject001_page3,page 3,ArchivalObject001,image/jpeg,ArchivalObject001_page3_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject001/page_3.jpg
+ArchivalObject002_page1,page 1,ArchivalObject002,image/jpeg,ArchivalObject002_page1_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject002/page_1.jpg
+ArchivalObject002_page2,page 2,ArchivalObject002,image/jpeg,ArchivalObject002_page2_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject002/page_2.jpg
+ArchivalObject002_page3,page 3,ArchivalObject002,image/jpeg,ArchivalObject002_page3_file,/var/www/html/drupal/web/modules/contrib/islandora_book_ingest/data/book_data/ArchivalObject002/page_3.jpg

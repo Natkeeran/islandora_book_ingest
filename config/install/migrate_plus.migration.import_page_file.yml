@@ -1,4 +1,5 @@
 
+uuid: 0a5237ac-ec0a-4c21-866a-b3c53cec7d9e
 # Uninstall this config when the feature is uninstalled
 dependencies:
   enforced:
@@ -19,7 +20,7 @@ source:
 
   # Each migration needs a unique key per row in the csv.  Here we're using the file path.
   keys: 
-    - file 
+    - file_identifier 
 
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
@@ -40,17 +41,7 @@ process:
   # Set these properties from constants.
   filemime: file_mime
   uid: constants/uid
-
-  # Hack the file name out of the full path provided in the 'file' column.
-  filename:
-    -
-      plugin: callback
-      callable: pathinfo
-      source: file
-    -
-      plugin: extract
-      index:
-        - basename
+  filename: file_identifier
 
   # Construct the destination URI using the file name.
   destination:
